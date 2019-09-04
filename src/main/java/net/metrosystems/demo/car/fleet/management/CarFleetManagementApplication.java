@@ -14,6 +14,8 @@ public class CarFleetManagementApplication {
     carFleetManagementService.addCar(car1);
     carFleetManagementService.addCar(car2);
 
+    carFleetManagementService.assignCarToEmployee("Ciprian Dumitrel", "IF02VFC");
+
     //carFleetManagementService.removeAllCars();
 
     carFleetManagementService.getAllFleetCars().forEach(System.out::println);

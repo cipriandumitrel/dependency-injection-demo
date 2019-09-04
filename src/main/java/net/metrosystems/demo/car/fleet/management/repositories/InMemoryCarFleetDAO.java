@@ -23,6 +23,10 @@ public class InMemoryCarFleetDAO {
     carsByLicensePlate.remove(licensePlate);
   }
 
+  public void assignCarToEmployee(String employeeName, String licensePlate) {
+    carsByLicensePlate.get(licensePlate).setAssignee("Ciprian Dumitrel");
+  }
+
   public void removeAllCars() {
     carsByLicensePlate.clear();
   }

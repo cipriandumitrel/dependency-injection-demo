@@ -24,11 +24,16 @@ public class CarFleetManagementService {
     sendEmail("A new car was removed from the fleet with license plate: " + licensePlate);
   }
 
-  private void sendEmail(String message) {
-    System.out.println(message);
+  public void assignCarToEmployee(String employeeName, String licensePlate) {
+    carFleetDAO.assignCarToEmployee(employeeName, licensePlate);
+    sendEmail("Car with license plate " + licensePlate + " was assigned to " + employeeName);
   }
 
   public void removeAllCars() {
     carFleetDAO.removeAllCars();
+  }
+
+  private void sendEmail(String message) {
+    System.out.println(message);
   }
 }
