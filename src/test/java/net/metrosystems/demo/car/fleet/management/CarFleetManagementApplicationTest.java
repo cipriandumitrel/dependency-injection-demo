@@ -1,6 +1,7 @@
 package net.metrosystems.demo.car.fleet.management;
 
 import net.metrosystems.demo.car.fleet.management.domain.Car;
+import net.metrosystems.demo.car.fleet.management.repositories.InMemoryCarFleetDAO;
 import net.metrosystems.demo.car.fleet.management.services.CarFleetManagementService;
 
 import org.junit.After;
@@ -15,7 +16,7 @@ public class CarFleetManagementApplicationTest {
 
   @Before
   public void init() {
-    carFleetManagementService = new CarFleetManagementService();
+    carFleetManagementService = new CarFleetManagementService(new InMemoryCarFleetDAO());
   }
 
   @Test

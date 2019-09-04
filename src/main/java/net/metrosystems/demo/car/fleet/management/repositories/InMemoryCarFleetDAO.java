@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class InMemoryCarFleetDAO {
+public class InMemoryCarFleetDAO implements CarFleetDAO {
 
   private static Map<String, Car> carsByLicensePlate = new ConcurrentHashMap<>();
 

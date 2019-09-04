@@ -1,13 +1,17 @@
 package net.metrosystems.demo.car.fleet.management.services;
 
 import net.metrosystems.demo.car.fleet.management.domain.Car;
-import net.metrosystems.demo.car.fleet.management.repositories.DatabaseCarFleetDAO;
+import net.metrosystems.demo.car.fleet.management.repositories.CarFleetDAO;
 
 import java.util.List;
 
 public class CarFleetManagementService {
 
-  private DatabaseCarFleetDAO carFleetDAO = new DatabaseCarFleetDAO();
+  private final CarFleetDAO carFleetDAO;
+
+  public CarFleetManagementService(CarFleetDAO carFleetDAO) {
+    this.carFleetDAO = carFleetDAO;
+  }
 
   public List<Car> getAllFleetCars() {
     return carFleetDAO.getAllFleetCars();

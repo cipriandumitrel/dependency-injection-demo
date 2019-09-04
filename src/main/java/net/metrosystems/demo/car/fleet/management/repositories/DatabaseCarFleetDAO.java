@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DatabaseCarFleetDAO {
+public class DatabaseCarFleetDAO implements CarFleetDAO {
 
   private static final String DATABASE_URL = PostgreSQLPropertiesRetriever
           .readProperties().getProperty("db.url");
